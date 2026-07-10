@@ -12,6 +12,8 @@ npm
 pnpm
 docker
 code
+codex
+dbeaver
 )
 
 for cmd in "${commands[@]}"
@@ -34,3 +36,5 @@ npm --version || true
 pnpm --version || true
 docker --version || true
 code --version || true
+codex --version || true
+
