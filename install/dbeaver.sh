@@ -2,20 +2,22 @@
 
 source "$(dirname "$0")/common.sh"
 
-heading "Installing DBeaver"
+heading "Installing DBeaver Community"
 
-# Load Homebrew environment
-if [ -d "/home/linuxbrew/.linuxbrew" ]; then
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-elif [ -d "$HOME/.linuxbrew" ]; then
-    eval "$("$HOME/.linuxbrew/bin/brew" shellenv)"
-fi
-
-if brew list --cask dbeaver-community >/dev/null 2>&1; then
+if command -v dbeaver >/dev/null 2>&1; then
     echo "DBeaver is already installed."
     exit 0
 fi
 
-brew install --cask dbeaver-community
+wget -O - https://dbeaver.io/debs/dbeaver.gpg.key \
+| sudo gpg --dearmor \
+-o /usr/share/keyrings/dbeaver.gpg
 
-echo "DBeaver installation completed."
+echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg] https://dbeaver.io/debs/dbeaver-ce /" \
+| sudo tee /etc/apt/sources.list.d/dbeaver.list >/dev/null
+
+sudo apt update
+
+sudo apt install -y dbeaver-ce
+
+echo "DBeaver installed successfully."
