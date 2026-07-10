@@ -10,9 +10,11 @@ brew
 node
 npm
 pnpm
+yarn
+ncu
+codex
 docker
 code
-codex
 dbeaver
 )
 
