@@ -36,7 +36,9 @@ brew --version || true
 node --version || true
 npm --version || true
 pnpm --version || true
+yarn --version || true
+ncu --version || true
+codex --version || true
 docker --version || true
 code --version || true
-codex --version || true
-
+dbeaver --version || true
