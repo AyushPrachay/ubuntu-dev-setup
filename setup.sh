@@ -17,8 +17,8 @@ chmod +x "$ROOT_DIR"/verify.sh
 "$ROOT_DIR/install/docker.sh"
 "$ROOT_DIR/install/vscode.sh"
 # "$ROOT_DIR/install/cursor.sh"
-"$ROOT_DIR/install/postman.sh"
-"$ROOT_DIR/install/dbeaver.sh"
+# "$ROOT_DIR/install/postman.sh"
+# "$ROOT_DIR/install/dbeaver.sh"
 
 echo
 echo "Running verification..."
