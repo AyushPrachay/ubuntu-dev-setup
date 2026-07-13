@@ -14,6 +14,7 @@ This repository bootstraps a fresh Ubuntu machine with all required development 
 - VS Code
 - Cursor
 - Postman
+- DBeaver
 
 ## Usage
 
